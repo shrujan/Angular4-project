@@ -1,0 +1,17 @@
+
+<div>
+  <h1> CRUD OPERATIONS </h1>
+
+  <div>
+    <input [(ngModel)]="languageName" >
+    <span class="button" (click) = "pushLang()">ADD</span>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor = "let language of LanguagesList">
+        <span>{{ language }}</span>
+        <span (click) = "deleteLang(language)">x</span>
+      </li>
+    </ul>
+  </div>
+</div>
