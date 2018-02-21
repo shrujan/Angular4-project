@@ -7,9 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
 
+// custom utlis
+import { sortPipe } from './Utilities/custom-pipes';
+
+
 
 @NgModule({
   declarations: [
+    sortPipe,
     AppComponent,
     HomeScreenComponent,
     CrudOperationsComponent

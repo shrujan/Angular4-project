@@ -1,17 +1,34 @@
 
-<div>
-  <h1> CRUD OPERATIONS </h1>
-
-  <div>
-    <input [(ngModel)]="languageName" >
-    <span class="button" (click) = "pushLang()">ADD</span>
+<div class="crud-container">
+  <div class="header">
+    <h1> CRUD OPERATIONS </h1>
   </div>
-  <div>
+
+  <div class="input-container">
+    <input [(ngModel)]="languageName" >
+    <span class="button" (click) = "pushLang()">
+      <div>ADD</div>
+    </span>
+  </div>
+  <div class="language-list">
     <ul>
-      <li *ngFor = "let language of LanguagesList">
-        <span>{{ language }}</span>
-        <span (click) = "deleteLang(language)">x</span>
+      <li *ngFor = "let language of languagesList">
+        <span class="selected-languages">{{ language }}</span>
+        <span (click) = "deleteLang(language)" class="delete-selected-lang">x</span>
       </li>
     </ul>
+  </div>
+  <div class="summary">
+    <div class="view-as">
+      <span (click) = 'showDropdown = !showDropdown' (blur)="showDropdown = false" >{{ selectedOrder }}</span>
+      <ul *ngIf="showDropdown">
+        <li (click)="userSelectedOrder('Ascending')" >Ascending</li>
+        <li (click)="userSelectedOrder('Descending')">Descending</li>
+      </ul>
+    </div>
+    <span>Languages Selected:</span>
+    <!--<span class="languages-selected">{{ languagesList | sort: selectedOrder }}</span>-->
+    <span class="languages-selected"></span>
+    {{ languagesList }}
   </div>
 </div>

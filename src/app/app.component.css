@@ -1,1 +1,13 @@
-	
+a {
+  font-size: 30px;
+  text-decoration: none;
+  border: 1px solid #5c5c5c;
+  background-color: #cc0710;
+  color: #ffffff;
+  margin: 0 10px 0 10px;
+}
+
+.routing-btn {
+  position: relative;
+  margin: 0 0 0 40%;
+}

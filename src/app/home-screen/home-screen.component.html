@@ -1,10 +1,14 @@
-<p>
-  BoomBazinga is Back....
-</p>
-<p>His real name is {{ name }}</p>
+<div class="weather-container">
+  <p>
+    Climate
+  </p>
+  <p>His real name is {{ name }}</p>
 
-<ul>
-	<li *ngFor = "let country of weather">{{ country.name }} == {{ country.climate }}</li>
-	
-</ul>
+  <ul>
+    <li *ngFor = "let country of weather">{{ country.name }} == {{ country.climate }}</li>
+
+  </ul>
+
+
+</div>
 

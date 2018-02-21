@@ -1,0 +1,106 @@
+.crud-container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  background: midnightblue;
+  height: 100px;
+}
+
+.header h1 {
+  color: #ffffff;
+  position: relative;
+  top: 30%;
+}
+
+.input-container {
+  margin: 0px;
+  margin-top: 5px;
+}
+
+.input-container input {
+  width: 80%;
+  height: 30px;
+  padding: 10px;
+  font-size: 20px;
+  color: #858585;
+}
+
+.input-container .button {
+  border: 1px solid #5c5c5c;
+  cursor: pointer;
+  background: cornflowerblue;
+  font-size: 20px;
+  width: 90px;
+  display: inline-block;
+  height: 43px;
+  bottom: 5px;
+  position: relative;
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.language-list ul li {
+  background: #ccc;
+  border: 1px solid #5c5c5c;
+  border-bottom: none;
+  height: 50px;
+  font-size: 20px;
+}
+
+ul li .selected-languages {
+  top: 20%;
+  position: relative;
+}
+
+.delete-selected-lang {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  top: 5%;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.summary {
+  margin-top: 26px;
+  font-size: 20px;
+  font-family: serif;
+}
+
+.summary .languages-selected {
+  color: #888
+}
+
+.view-as {
+  list-style: none;
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+
+.view-as span {
+  border: 1px solid #ccc;
+  display: block;
+  font-size: 25px;
+  color: #899;
+  height: 35px;
+  cursor: pointer;
+}
+
+.view-as ul {
+  margin: 0;
+}
+
+.view-as ul li {
+  border:1px solid #cccccc;
+}
