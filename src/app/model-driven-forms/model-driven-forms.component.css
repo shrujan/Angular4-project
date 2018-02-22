@@ -1,0 +1,43 @@
+.container {
+  background-color: #ccc;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.container input {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  padding: 5px;
+  color: #888;
+  margin: 5px;
+}
+
+.container .form-class {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.container .selected-lang {
+  width: 101%;
+  background-color: white;
+  margin-left: 7px;
+  height: 40px;
+  display: inline-block;
+  color: #888;
+  top: 10px;
+  position: relative;
+  font-size: 22px;
+  padding-top: 2%;
+  padding-left: 1%;
+
+}
+
+.container ul {
+  list-style: none;
+}
+
+.clear {
+  clear: both
+}

@@ -1,0 +1,11 @@
+.weather-container {
+  list-style: none;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  background-color: midnightblue;
+  color: #ccc;
+}

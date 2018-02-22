@@ -15,15 +15,15 @@ export class HomeScreenComponent implements OnInit {
   ngOnInit() {
   }
 
-	name = 'shrujan'
+	name = 'INDIA'
 
 	weather = [{
-		name: "India",
-		climate: "30"		
-	} ,
-	{
-		name: "USA",
-		climate: "humid"
-	}
+      name: "India",
+      climate: "30"
+    } ,
+    {
+      name: "USA",
+      climate: "humid"
+    }
 	]
 }

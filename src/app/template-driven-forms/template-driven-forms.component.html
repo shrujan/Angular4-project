@@ -1,0 +1,14 @@
+<div class="container">
+  <form class = 'form-class'
+        #thisFormName = "ngForm"
+        (ngSubmit) = "saveData(thisFormName.value)"
+  >
+    <input type = 'text' name = 'firstName' placeholder="Enter First Name ..." ngModel>
+    <input type = 'text' name = 'lastName' placeholder="Enter Last Name ..." ngModel>
+    <span>{{ selectedLang }}</span>
+    <ul >
+      <li *ngFor = "let lang of languagesList" (click)="selectedLang = lang" > {{ lang }} </li>
+    </ul>
+    <input type="submit" name="Submit">
+  </form>
+</div>

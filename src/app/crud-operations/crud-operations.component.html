@@ -28,7 +28,6 @@
     </div>
     <span>Languages Selected:</span>
     <!--<span class="languages-selected">{{ languagesList | sort: selectedOrder }}</span>-->
-    <span class="languages-selected"></span>
-    {{ languagesList }}
+    <span class="languages-selected" *ngFor="let lang of languagesList "> {{ lang  }}</span>
   </div>
 </div>
