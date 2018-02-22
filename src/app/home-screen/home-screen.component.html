@@ -1,0 +1,17 @@
+<div class="weather-container">
+  <div class="header">
+    <h1>
+      Climate
+    </h1>
+    <h3>Country Name is  {{ name }}</h3>
+  </div>
+
+
+  <ul>
+    <li *ngFor = "let country of weather">{{ country.name }} == {{ country.climate }}</li>
+
+  </ul>
+
+
+</div>
+

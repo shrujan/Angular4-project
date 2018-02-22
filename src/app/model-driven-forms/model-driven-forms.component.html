@@ -1,0 +1,16 @@
+<div class="container">
+  <form class = 'form-class'
+        [formGroup] = form
+        (ngSubmit) = "onSubmit(form.value)"
+  >
+    <input type = 'text' name = 'firstName' placeholder="Enter First Name ..." formControlName="firstName">
+    <input type = 'text' name = 'lastName' placeholder="Enter Last Name ..." formControlName="lastName">
+    <div class="clear"></div>
+    <span class="selected-lang">{{ selectedLang }}</span>
+    <ul >
+      <li *ngFor = "let lang of languagesList" (click)="selectedLang = lang" > {{ lang }} </li>
+    </ul>
+    <input type="submit" name="Submit">
+  </form>
+
+</div>
