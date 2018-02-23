@@ -1,0 +1,21 @@
+.base-converter {
+  background-color: #cccccc;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.base-converter .input-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.base-converter input {
+  width: 100%;
+  background-color: #fef600;
+  height: 40px;
+  font-size: 25px;
+  padding-left: 10px;
+  margin-bottom: 2px;
+  color:#4d9597
+}

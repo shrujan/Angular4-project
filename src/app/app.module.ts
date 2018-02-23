@@ -10,6 +10,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { ModelDrivenFormsComponent } from './model-driven-forms/model-driven-forms.component';
+import { BaseConverterComponent } from './base-converter/base-converter.component';
 
 // custom utlis
 import { sortPipe } from './Utilities/custom-pipes';
@@ -23,7 +24,8 @@ import { sortPipe } from './Utilities/custom-pipes';
     HomeScreenComponent,
     CrudOperationsComponent,
     TemplateDrivenFormsComponent,
-    ModelDrivenFormsComponent
+    ModelDrivenFormsComponent,
+    BaseConverterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,10 @@ import { sortPipe } from './Utilities/custom-pipes';
       {
         path: 'model-form',
         component: ModelDrivenFormsComponent
+      },
+      {
+        path: 'base-calc',
+        component: BaseConverterComponent
       }
     ])
   ],

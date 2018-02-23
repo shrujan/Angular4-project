@@ -1,15 +1,24 @@
 <div class="container">
-  <form class = 'form-class'
+  <form class = "form-class"
         [formGroup] = form
         (ngSubmit) = "onSubmit(form.value)"
   >
     <input type = 'text' name = 'firstName' placeholder="Enter First Name ..." formControlName="firstName">
     <input type = 'text' name = 'lastName' placeholder="Enter Last Name ..." formControlName="lastName">
+
     <div class="clear"></div>
-    <span class="selected-lang">{{ selectedLang }}</span>
-    <ul >
-      <li *ngFor = "let lang of languagesList" (click)="selectedLang = lang" > {{ lang }} </li>
-    </ul>
+
+    <!--<span class="selected-lang">{{ selectedLang }}</span>-->
+    <!--<ul>-->
+      <!--<li *ngFor = "let lang of languagesList" (click)="selectedLang = lang" > {{ lang }} </li>-->
+    <!--</ul>-->
+
+    <select class="selected-lang" [(ngModel)] = "selectedLang" formControlName="selectedLang">
+        <!--<option selected disabled hidden>Choose One ... </option>-->
+        <!--<option [ngValue]="undefined" hidden disabled selected = 'selected'>Select Language</option>-->
+        <option *ngFor = "let lang of languagesList" [ngValue]=" lang "> {{ lang }}</option>
+    </select>
+
     <input type="submit" name="Submit">
   </form>
 

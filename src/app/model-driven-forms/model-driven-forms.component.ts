@@ -9,7 +9,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 export class ModelDrivenFormsComponent implements OnInit {
 
-  constructor() { }
 
   form;
 
@@ -17,14 +16,14 @@ export class ModelDrivenFormsComponent implements OnInit {
     this.form = new FormGroup({
       firstName: new FormControl('Shrujan'),
       lastName: new FormControl(''),
-      selectedLang: new FormControl(this.selectedLang)
+      selectedLang: new FormControl('')
     });
   }
   languagesList = ['English', 'Hindi', 'Konkani'];
   selectedLang = 'Select Now';
 
   onSubmit = function (user) {
-    user.selectedLang = this.selectedLang;
+    // user.selectedLang = this.selectedLang;
 
     console.log(user)
   }
