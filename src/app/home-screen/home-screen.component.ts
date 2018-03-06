@@ -13,9 +13,15 @@ export class HomeScreenComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.videoElement = document.querySelector('video');
+    navigator.mediaDevices.getUserMedia({ video: true } );
+
+    navigator.mediaDevices.getUserMedia({}).
+    then(stream).catch(()=>{});
   }
 
-	name = 'INDIA'
+  videoElement;
+	name = 'INDIA';
 
 	weather = [{
       name: "India",
@@ -26,4 +32,12 @@ export class HomeScreenComponent implements OnInit {
       climate: "humid"
     }
 	]
+
+
+
+  let stream = (sream) => {
+    window.stream = stream; // make stream available to console
+    this.videoElement.srcObject = stream;
+  }
+
 }

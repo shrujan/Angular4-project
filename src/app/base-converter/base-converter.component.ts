@@ -43,7 +43,7 @@ export class BaseConverterComponent implements OnInit {
       if (newVal !== '') {
         this.form.patchValue({ decimalNumber: parseInt(newVal, 2).toString(10)});
       } else {
-        this.form.patchValue({ decimalNumber: "");
+        // this.form.patchValue({ decimalNumber: "");
       }
 
 
