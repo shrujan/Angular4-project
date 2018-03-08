@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { AfterViewInit, Component, Directive, ViewChild } from '@angular/core';
+
 // ReactiveFormsModule - module based form
 // FormsModule - template based form
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
