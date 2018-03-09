@@ -4,19 +4,19 @@ import 'rxjs/add/operator/map';
 import * as RecordRTC from 'recordrtc';
 import { AfterViewInit, Directive, ViewChild } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders  } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-screen',
   templateUrl: './home-screen.component.html',
   styleUrls: ['./home-screen.component.css']
 })
-// @ViewChild('video')
 
 export class HomeScreenComponent implements OnInit {
 
   @ViewChild('video') video: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     // this.videoElement = document.querySelector('video');
@@ -100,7 +100,7 @@ export class HomeScreenComponent implements OnInit {
   toggleControls() {
     let video: HTMLVideoElement = this.video.nativeElement;
     video.muted = !video.muted;
-    video.controls = !video.controls;
+    video.controls = false;
     video.autoplay = !video.autoplay;
   }
 
@@ -122,7 +122,7 @@ export class HomeScreenComponent implements OnInit {
     console.log(this.recordRTC);
 
     let fd = new FormData();
-    fd.append("file", this.recordRTC.blob);
+    fd.append("file", this.recordRTC.blob, 'shrujan.webm');
 
 
     let headers = new HttpHeaders();
@@ -130,8 +130,11 @@ export class HomeScreenComponent implements OnInit {
     headers = headers.set('Accept', 'video/webm');
 
 
-    this.http.post('/file-upload', fd, { headers: headers }).subscribe(() => {
+    this.http.post('/custom-url', fd, { headers: headers }).subscribe(() => {
         console.log('yo');
     })
+
+    // custom redirection
+    this.router.navigate(['/model-form']);
   }
 }

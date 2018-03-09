@@ -14,10 +14,13 @@ import { CrudOperationsComponent } from './crud-operations/crud-operations.compo
 import { TemplateDrivenFormsComponent } from './template-driven-forms/template-driven-forms.component';
 import { ModelDrivenFormsComponent } from './model-driven-forms/model-driven-forms.component';
 import { BaseConverterComponent } from './base-converter/base-converter.component';
+import { LogInComponent } from './log-in/log-in.component';
+
+// services import
+import { CommonServiceService } from './services/common-service.service';
 
 // custom utlis
 import { sortPipe } from './Utilities/custom-pipes';
-
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { sortPipe } from './Utilities/custom-pipes';
     CrudOperationsComponent,
     TemplateDrivenFormsComponent,
     ModelDrivenFormsComponent,
-    BaseConverterComponent
+    BaseConverterComponent,
+    LogInComponent
   ],
   imports: [
     BrowserModule,
@@ -55,10 +59,14 @@ import { sortPipe } from './Utilities/custom-pipes';
       {
         path: 'base-calc',
         component: BaseConverterComponent
+      },
+      {
+        path: 'login',
+        component: LogInComponent
       }
     ])
   ],
-  providers: [],
+  providers: [CommonServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
