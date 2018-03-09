@@ -12,6 +12,11 @@
 
   </ul>
 
+  <!--<input type="file" accept="video/*;capture=webcam ">-->
+  <video #video class="video" autoplay>no video</video>
 
+  <button class="start-recording" (click)="startRecording()"> Record </button>
+  <button (click)="stopRecording()"> STOP</button>
+  <button (click)="download()"> Download</button>
 </div>
 

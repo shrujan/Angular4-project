@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import * as _ from 'lodash';
 
 @Component({
@@ -10,6 +11,10 @@ import * as _ from 'lodash';
   // }
 })
 export class CrudOperationsComponent  {
+
+  constructor(private httpClient: HttpClient ) {
+
+  }
 
   languageName = '';
   selectedOrder = 'Ascending';
@@ -25,6 +30,14 @@ export class CrudOperationsComponent  {
       // detect changes on the current component
       // this.cd is an injected ChangeDetector instance
       // this.cd.detectChanges();
+
+
+      // HTTP CALL to Save the data.
+      this.httpClient.post('http://localhost:4200/post/', {'name':'shrujan'}).subscribe((response) => {
+          console.log('response')
+      }, (err) => {
+        console.log(err)
+      })
     }
 
   };

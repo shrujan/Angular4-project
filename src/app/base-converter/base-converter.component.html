@@ -1,0 +1,27 @@
+
+
+<form class="base-converter"
+   [formGroup] = "form"
+>
+  <div class="input-wrapper">
+
+      <input type="text" placeholder="Decimal Number .."
+             name="decimalNumber"
+             (ngModelChange)="decimalChanged(oldValue, newVal = $event, 'decimal')"
+             formControlName="decimalNumber">
+
+
+      <input type="text" placeholder="Binary Number .."
+             name="binaryNumber"
+             (ngModelChange) = "binaryChanged(oldValue, newVal = $event, 'binary')"
+             formControlName="binaryNumber">
+
+
+      <!--<input type="text" placeholder="Hexa Number .."-->
+             <!--name="hexaNumber"-->
+             <!--formControlName="hexaNumber">-->
+
+  </div>
+
+
+</form>

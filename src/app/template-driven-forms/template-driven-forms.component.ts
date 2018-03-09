@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonServiceService } from '../services/common-service.service';
+
 
 @Component({
   selector: 'app-template-driven-forms',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenFormsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _commonService: CommonServiceService) { }
 
   ngOnInit() {
     this.selectedLang = 'Select Lang';
@@ -15,6 +17,7 @@ export class TemplateDrivenFormsComponent implements OnInit {
 
   languagesList = ['English', 'Hindi', 'Konkani'];
   selectedLang = '';
+  name = this._commonService.getName();
 
   saveData = function (formVal) {
     let userData = formVal;
