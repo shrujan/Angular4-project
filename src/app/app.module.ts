@@ -15,12 +15,24 @@ import { TemplateDrivenFormsComponent } from './template-driven-forms/template-d
 import { ModelDrivenFormsComponent } from './model-driven-forms/model-driven-forms.component';
 import { BaseConverterComponent } from './base-converter/base-converter.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { TutorialProjectComponent } from './tutorial-project/tutorial-project.component';
+import { HeaderComponent } from './tutorial-project/header/header-component';
+import { ShoppingListEditComponent } from './tutorial-project/shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { ShoppingListComponent } from './tutorial-project/shopping-list/shopping-list.component';
+import { RecipeBookComponent } from './tutorial-project/recipe-book/recipe-book.component';
+import { RecipeItemComponent } from './tutorial-project/recipe-book/recipe-item/recipe-item.component';
+import { RecipeDetailComponent } from './tutorial-project/recipe-book/recipe-item/recipe-detail/recipe-detail.component';
 
 // services import
 import { CommonServiceService } from './services/common-service.service';
 
 // custom utlis
 import { sortPipe } from './Utilities/custom-pipes';
+
+
+
+
+
 
 
 @NgModule({
@@ -32,7 +44,15 @@ import { sortPipe } from './Utilities/custom-pipes';
     TemplateDrivenFormsComponent,
     ModelDrivenFormsComponent,
     BaseConverterComponent,
-    LogInComponent
+    LogInComponent,
+    TutorialProjectComponent,
+    HeaderComponent,
+    ShoppingListComponent,
+    ShoppingListEditComponent,
+    RecipeBookComponent,
+    RecipeItemComponent,
+    RecipeDetailComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -63,6 +83,10 @@ import { sortPipe } from './Utilities/custom-pipes';
       {
         path: 'login',
         component: LogInComponent
+      },
+      {
+        path: "tutorial-project",
+        component: TutorialProjectComponent
       }
     ])
   ],
